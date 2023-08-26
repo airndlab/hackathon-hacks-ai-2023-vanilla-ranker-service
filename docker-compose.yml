@@ -1,0 +1,12 @@
+name: vanilla-ranker
+
+services:
+  service:
+    build:
+      context: .
+    environment:
+      - EXCEL_DATA_PATH=/train_dataset.xlsx
+    volumes:
+      - ./dataset/train_dataset.xlsx:/train_dataset.xlsx
+    ports:
+      - 8086:80
